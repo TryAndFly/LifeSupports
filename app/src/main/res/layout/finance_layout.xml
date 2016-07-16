@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.financemanager.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本月收支情况"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="收入总计:"/>
+        <TextView
+            android:id="@+id/totalIncome"
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="10065.32元"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="支出总计:"/>
+        <TextView
+            android:id="@+id/totalPay"
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="10065.32元"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="收支结余:"/>
+        <TextView
+            android:id="@+id/after"
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:text="10065.32元"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:onClick="add"
+            android:layout_margin="5dp"
+            android:text="添加收支"/>
+        <Button
+            android:id="@+id/see_list"
+            android:layout_width="wrap_content"
+            style="@style/MyStyle"
+            android:layout_margin="5dp"
+            android:onClick="lookIncome"
+            android:text="隐藏详情"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/income">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
